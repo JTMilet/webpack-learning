@@ -1,0 +1,23 @@
+{
+  "name": "webpack-learning",
+  "version": "1.0.0",
+  "description": "webpack的逐步分解学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Milet-Mistic/webpack-learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Milet-Mistic/webpack-learning/issues"
+  },
+  "homepage": "https://github.com/Milet-Mistic/webpack-learning#readme",
+  "devDependencies": {
+    "webpack": "^5.10.3",
+    "webpack-cli": "^4.2.0"
+  }
+}
