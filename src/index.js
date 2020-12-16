@@ -6,7 +6,7 @@
  * @Description: 创建index.js
  * @FilePath: \webpack-learning\src\index.js
  */
-import _ from 'lodash';
+import _ from 'lodash'
 function component () {
   const element = document.createElement('div')
   // lodash已本地引入
