@@ -1,7 +1,7 @@
 /*
  * @Author: 杜康
  * @Date: 2020-12-16 17:02:31
- * @LastEditTime: 2020-12-17 15:48:33
+ * @LastEditTime: 2020-12-17 16:04:13
  * @LastEditors: 杜康 VX:Dk_Ns_Gyy
  * @Description: 创建webpack.config.js
  * @FilePath: \webpack-learning\webpack.config.js
@@ -13,9 +13,12 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
+    print: './src/print.js'
   },
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
+  },
   plugins: [
     new CleanWebpackPlugin({
       cleanStaleWebpackAssets: false
