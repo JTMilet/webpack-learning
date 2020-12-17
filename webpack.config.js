@@ -1,7 +1,7 @@
 /*
  * @Author: 杜康
  * @Date: 2020-12-16 17:02:31
- * @LastEditTime: 2020-12-17 15:20:33
+ * @LastEditTime: 2020-12-17 15:48:33
  * @LastEditors: 杜康 VX:Dk_Ns_Gyy
  * @Description: 创建webpack.config.js
  * @FilePath: \webpack-learning\webpack.config.js
@@ -17,7 +17,9 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: false
+    }),
     new HtmlWebpackPlugin({
       title: 'Development'
     })
