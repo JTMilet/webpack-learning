@@ -1,12 +1,15 @@
 /*
  * @Author: 杜康
  * @Date: 2020-12-16 17:02:31
- * @LastEditTime: 2020-12-17 10:26:06
- * @LastEditors: 杜康 微信：Dk_Ns_Gyy
+ * @LastEditTime: 2020-12-17 13:32:23
+ * @LastEditors: 杜康 VX：Dk_Ns_Gyy
  * @Description: 创建webpack.config.js
  * @FilePath: \webpack-learning\webpack.config.js
  */
 const path = require('path')
+const toml = require('toml')
+const yaml = require('yamljs')
+const json5 = require('json5')
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -29,6 +32,35 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource'
+      },
+      {
+        test: /\.(csv|tsv)$/i,
+        use: ['csv-loader']
+      },
+      {
+        test: /\.xml$/i,
+        use: ['xml-loader']
+      },
+      {
+        test: /\.toml$/i,
+        type: 'json',
+        parser: {
+          parse: toml.parse
+        }
+      },
+      {
+        test: /\.yaml$/i,
+        type: 'json',
+        parser: {
+          parse: yaml.parse
+        }
+      },
+      {
+        test: /\.json5$/i,
+        type: 'json',
+        parser: {
+          parse: json5.parse
+        }
       }
     ]
   }
