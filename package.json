@@ -5,6 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "server": "node server.js",
     "build": "webpack"
   },
   "repository": {
@@ -18,10 +20,13 @@
   },
   "homepage": "https://github.com/Milet-Mistic/webpack-learning#readme",
   "devDependencies": {
+    "@webpack-cli/serve": "^1.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "express": "^4.17.1",
     "html-webpack-plugin": "^4.5.0",
     "webpack": "^5.10.3",
-    "webpack-cli": "^4.2.0"
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-middleware": "^4.0.2"
   },
   "dependencies": {
     "lodash": "^4.17.20"
